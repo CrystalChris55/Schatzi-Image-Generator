@@ -1,0 +1,1 @@
+Practicing my CSS, HTML, and JavaScript with a random image generator for my Pembrooke Welsh Corgi, Schatzi.
