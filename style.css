@@ -1,45 +1,125 @@
 html {
-  background-color: silver;
+height: 100%;
+background-color: silver;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.container {
+height: 100%;
+background-color: silver;
+display: flex;
+}
+
+.peppasidebar {
+  flex: 1 0;
+  flex-direction: column;
+  width: 25%;
+  background-color: rgb(197, 107, 250);
+}
+.emptybox {
+  display: flex;
+  flex: 2;
+}
+.sidebar {
+background-color: rgba(0,0,0,0.2);
+display: flex;
+width: 25%;
+flex-direction: column;
+flex: 1 0;
+}
+.imagebutton {
+  flex: 4;
+}
+.button {
+background-color: rgba(14, 217, 231, 0.836);
+border: 1px solid black;
+align-self: center;
+justify-self: center;
+box-shadow: 1px 8px 16px 1px rgba(0,0,0,0.2);
+width: 555px;
+height: 25px;
+border-radius: 1em;
+outline: none;
 }
 
 .img  {
-  box-shadow: 1px 8px 16px 1px black;
+box-shadow: 1px 8px 16px 1px black;
 margin-left: 18px;
 align-self: center;
 width: 550px;
 height: 450px;
 border: 1px solid black;
 margin-right: 1em;
+margin-top: 1em;
 object-fit: cover;
-}
-.container {
-  height: 100vh;
-  background-color: silver;
-  display: flex;
-  flex-direction: column;
-  
-}
-.button {
-  background-color: rgba(14, 217, 231, 0.836);
-  border: 1px solid black;
-  align-self: center;
-  justify-self: center;
-  box-shadow: 1px 8px 16px 1px rgba(0,0,0,0.2);
-  width: 555px;
-  height: 25px;
-  border-radius: 1em;
-  outline: none;
 }
 
 .button:hover {
-  background-color: rgba(14, 138, 148, 0.781);
-  border-radius: 1em;
-  outline: none;
+background-color: rgba(14, 138, 148, 0.781);
+border-radius: 1em;
+outline: none;
 
 }
 
 .button:active {
-  transform: translateY(4px);
-  outline: none;
+transform: translateY(4px);
+outline: none;
 
+}
+
+#schatziheader {
+  margin-left: 2.5px;
+  font-size: 1em;
+}
+
+#schaztiheader2 {
+  font-size: 1em;
+}
+
+#schatzi1 {
+  font-size: .8em;
+  margin: 3px;
+}
+
+#schatzi2 {
+  font-size: .8em;
+  margin: 3px;
+}
+.food {
+  list-style-type: circle;
+  margin: 0;
+}
+.interests{
+  list-style-type: circle;
+  margin: 0;
+}
+
+#peppaheader{
+  margin-left: 2.5px;
+  font-size: 1em;
+  margin-right: 10px;
+  margin: 0;
+}
+
+#peppaparagraph{
+  margin-right: 10px;
+  font-size: .8em;
+  margin: 0;
+}
+
+.peppainterests {
+  margin-right: 10px;
+}
+
+#peppaparagraph2 {
+  margin-right: 10px;
+  font-size: .8em;
+  margin: 0;
+}
+#peppaDOB {
+  font-size: 1em;
 }
