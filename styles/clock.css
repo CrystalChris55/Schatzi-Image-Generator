@@ -1,0 +1,21 @@
+html {
+    height: 100vh;
+    background-color: silver;
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
+  
+  /* ------ clock.html ------ */
+  
+  .date {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }

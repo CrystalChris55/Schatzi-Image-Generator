@@ -1,0 +1,11 @@
+html {
+  height: 100vh;
+  background-color: silver;
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+

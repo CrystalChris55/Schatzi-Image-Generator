@@ -1,0 +1,130 @@
+html {
+    height: 100vh;
+    background-color: silver;
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
+  /* ------ Main Section ------ */
+  .container {
+  background-color: silver;
+  display: flex;
+  }
+  .main {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+  }
+  
+  .button {
+    background-color: rgba(14, 217, 231, 0.836);
+    border: 1px solid black;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 1px 8px 16px 1px rgba(0,0,0,0.2);
+    border-radius: 1em;
+    outline: none;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    padding: 0.5em 3em 0.5em 3em;
+    }
+  
+  .img  {
+    box-shadow: 1px 8px 16px 1px black;
+    margin-left: 18px;
+    align-self: center;
+    width: 550px;
+    height: 450px;
+    border: 1px solid black;
+    margin-right: 1em;
+    margin-top: 1em;
+   object-fit: cover;
+    }
+      
+    .button:hover {
+    background-color: rgba(14, 138, 148, 0.781);
+    border-radius: 1em;
+    outline: none;
+    transform: translateY(0.5px);
+      
+    }
+      
+    .button:active {
+    transform: translateY(4px);
+    outline: none;
+      
+    }
+    
+  /* ------ Sidebar Section ------ */
+  .peppasidebar {
+  order: 3 ;
+  flex: 1 0;
+  flex-direction: column;
+  width: 25vh;
+  background-color: rgb(197, 107, 250);
+  }
+  .sidebar {
+  order: 1;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  width: 25vh;
+  flex-direction: column;
+  flex: 1 0;
+  }
+  
+  #schatziheader {
+    margin-left: 2.5px;
+    font-size: 1em;
+  }
+  
+  #schaztiheader2 {
+    font-size: 1em;
+  }
+  
+  #schatzi1 {
+    font-size: .8em;
+    margin: 3px;
+  }
+  
+  #schatzi2 {
+    font-size: .8em;
+    margin: 3px;
+  }
+  .food {
+    list-style-type: circle;
+    margin: 0;
+  }
+  .interests{
+    list-style-type: circle;
+    margin: 0;
+  }
+  
+  #peppaheader{
+    margin-left: 2.5px;
+    font-size: 1em;
+    margin-right: 10px;
+    margin: 0;
+  }
+  
+  #peppaparagraph{
+    margin-right: 10px;
+    font-size: .8em;
+    margin: 0;
+  }
+  
+  .peppainterests {
+    margin-right: 10px;
+  }
+  
+  #peppaparagraph2 {
+    margin-right: 10px;
+    font-size: .8em;
+    margin: 0;
+  }
+  #peppaDOB {
+    font-size: 1em;
+  }
