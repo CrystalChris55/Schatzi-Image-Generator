@@ -27,7 +27,7 @@ flex-direction: column;
 flex: 1 0;
 }
 
-.imagebutton {
+.main {
   display: flex;
   flex-direction: column;
   flex: 7;
@@ -69,6 +69,14 @@ transform: translateY(0.5px);
 transform: translateY(4px);
 outline: none;
 
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 #schatziheader {
