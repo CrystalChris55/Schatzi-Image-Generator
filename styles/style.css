@@ -9,3 +9,50 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+.container {
+  display:flex;
+  flex-direction: column;
+}
+
+.header {
+  padding-left: 1.5em;
+  color: white;
+  background-color:#124766;
+}
+.navbar {
+  display: flex;
+  flex-direction:row;
+  flex: 0;
+}
+
+/* Project of Cards */
+.cards {
+  margin: 1em 0px 0px 1em;
+  display:grid;
+  grid-template-columns: 225px;
+  grid-auto-rows: repeat(auto-fill,250px);
+  grid-gap: 3em;
+  }
+
+  .card {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: .5rem;
+  box-shadow: .4em .4em 1em;
+  background-color: grey;
+  }
+
+  .cardimages {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  }
+
+/* Media Queries */
+@media(min-width: 640px){
+
+}
+
+@media(min-width: 1024px){
+
+}
