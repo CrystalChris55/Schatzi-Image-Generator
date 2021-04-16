@@ -48,6 +48,16 @@ body {
   border: 2px solid black;
   }
 
+  a {
+    color: #2c87f0;
+  }
+  a:visited {
+    color: #0065b8;
+  }
+  a:hover, a:active, a:focus {
+    color:#c33;
+  }
+
 /* Media Queries */
 @media(min-width: 640px){
 
