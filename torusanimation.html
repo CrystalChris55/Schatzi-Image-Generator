@@ -23,8 +23,15 @@
 
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
-         renderer.shadowMapEnabled = true
+         renderer.shadowMapEnabled = true;
+         renderer.shadowMap.renderReverseSided = false;
 			document.body.appendChild( renderer.domElement );
+
+         // Texture load goes here
+         const texture = new THREE.TextureLoader().load( "Images/meprogramming.png")
+         texture.wrapS = THREE.RepeatWrapping
+         texture.wrapT = THREE.RepeatWrapping
+         texture.repeat.set(4,4)
 
          // Camera controls go here.
          controls = new THREE.OrbitControls( camera, renderer.domElement );
@@ -33,18 +40,21 @@
 
          // Objects go here V-----V
             const geometry = new THREE.TorusKnotGeometry( 5, 1, 50, 5 );
-            const planeGeometry = new THREE.PlaneGeometry( 200, 200, 32, 32 );
+            const planeGeometry = new THREE.PlaneGeometry( 800, 800, 32, 32 );
 
 
          // Materials go here V-----V
             const material = new THREE.MeshStandardMaterial( { color: 0x0ffff0 } );
-            const planeMaterial = new THREE.MeshStandardMaterial( { color: 0x4B9CD3 } )
+            const planeMaterial = new THREE.MeshStandardMaterial( { color: 0x4B9CD3, map: texture, side:THREE.DoubleSide } )
 
 
          // Mesh for Torus go here V-----V
             const torusKnot = new THREE.Mesh( geometry, material );
             torusKnot.receiveShadow = true;
             torusKnot.castShadow = true;
+            torusKnot.position.z = 0;
+            torusKnot.position.y = 20;
+            torusKnot.position.x = 10;
             scene.add( torusKnot );
 
          // Mesh for plane goes here V-----V
@@ -54,13 +64,19 @@
             plane.position.z = 0;
             plane.position.y = 0;
             plane.position.x = -20;
-            plane.rotation.y = 1;
+            plane.rotation.y = 0.5;
+      
 			
-         // Lighting go here V-----V
-            const light = new THREE.PointLight( 0xCC8899, 1, 100 )
-            light.position.set( 15, 0, 0 );
+         // Lighting go here V-----V (Color, intensity, distance, decay )
+            const light = new THREE.PointLight( 0xCC8899, 15, 400, 5 )
+            light.position.set( 0, 0, 75 );
             light.castShadow = true;
             scene.add( light );
+
+            const light2 = new THREE.PointLight( 0xCC8899, 10, 150, 3 )
+            light2.position.set( 0, 0, -75 );
+            light2.castShadow = true;
+            scene.add( light2 );
 
          // Spot light helper for light position
             const PointLightHelper = new THREE.PointLightHelper( light );
@@ -88,6 +104,7 @@
 				renderer.render( scene, camera );
 			};
 			animate();
+         
 		</script>
 	</body>
 </html>
