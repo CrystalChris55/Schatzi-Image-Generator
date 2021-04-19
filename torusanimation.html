@@ -8,6 +8,7 @@
         <meta http-equiv="content-type" content="text/html; charset-UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://threejs.org/build/three.js"></script>
+        <!-- Camera control source -->
         <script src="/scripts/OrbitControls.js"></script>
     </head>
     
@@ -26,9 +27,22 @@
          renderer.shadowMapEnabled = true;
          renderer.shadowMap.renderReverseSided = false;
 			document.body.appendChild( renderer.domElement );
+         // Tube construct goes here
+         //class CustomSinCurve extends THREE.Curve {
+            //constructor( scale = 1 ) {
+               //super();
+               //this.scale = scale;
+            //}
+            //getpoint(t, optionalTarget = new THREE.Vector3())
+         //}
+         
 
          // Texture load goes here
-         const texture = new THREE.TextureLoader().load( "Images/meprogramming.png")
+         const texture = new THREE.TextureLoader().load( "Images/itsablock.png")
+         texture.wrapS = THREE.RepeatWrapping
+         texture.wrapT = THREE.RepeatWrapping
+         texture.repeat.set(4,4)
+         const texture2 = new THREE.TextureLoader().load("Images/funnypipe.png")
          texture.wrapS = THREE.RepeatWrapping
          texture.wrapT = THREE.RepeatWrapping
          texture.repeat.set(4,4)
@@ -39,12 +53,15 @@
 
 
          // Objects go here V-----V
-            const geometry = new THREE.TorusKnotGeometry( 5, 1, 50, 5 );
+         // Torus Geometry *(radius, tube, tubular segments, radialSegements)*
+         // P - This determines how many times the geometry winds around its axis of rotational symmetry. Default is 2 
+         // Q - This value determines how many times the geoemtry winds around a circle in the interior of the torus. Defualt is 3.
+            const geometry = new THREE.TorusKnotGeometry( 60, 35, 100, 16, /* P =*/ 3, /* Q =*/ 4, );
             const planeGeometry = new THREE.PlaneGeometry( 800, 800, 32, 32 );
 
 
          // Materials go here V-----V
-            const material = new THREE.MeshStandardMaterial( { color: 0x0ffff0 } );
+            const material = new THREE.MeshStandardMaterial( { map:texture2, } );
             const planeMaterial = new THREE.MeshStandardMaterial( { color: 0x4B9CD3, map: texture, side:THREE.DoubleSide } )
 
 
@@ -53,8 +70,8 @@
             torusKnot.receiveShadow = true;
             torusKnot.castShadow = true;
             torusKnot.position.z = 0;
-            torusKnot.position.y = 20;
-            torusKnot.position.x = 10;
+            torusKnot.position.y = 55;
+            torusKnot.position.x = 175;
             scene.add( torusKnot );
 
          // Mesh for plane goes here V-----V
