@@ -2,7 +2,6 @@ html {
   height: 100vh;
   background-color: silver;
 }
-
 body {
   height: 100vh;
   margin: 0px;
@@ -26,7 +25,7 @@ body {
 }
 
 /* Project of Cards */
-.cards {
+.card_body {
   margin: 1em 0px 0px 1em;
   display:grid;
   grid-template-columns: 225px;
@@ -34,7 +33,10 @@ body {
   grid-gap: 3em;
   }
 
-  .card {
+  .card_content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
   border: 2px solid black;
   border-radius: 4px;
   padding: .5rem;
@@ -42,20 +44,32 @@ body {
   background-color: grey;
   }
 
-  .cardimages {
+  .card_images {
   width: 200px;
   height: 200px;
   border: 2px solid black;
+  filter: contrast(70%);
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  }
+  .card_images:hover{
+   filter: contrast(100%);
   }
 
   a {
-    color: #2c87f0;
+    color: #0501f7a8;
   }
   a:visited {
-    color: #0065b8;
+    color: #004a86;
   }
   a:hover, a:active, a:focus {
     color:#c33;
+  }
+  .header_href {
+    color:aqua
+  }
+  .header_href:visited
+  {
+    color:rgba(3, 105, 105, 0.712)
   }
 
 /* Media Queries */
